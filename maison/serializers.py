@@ -6,7 +6,7 @@ class houseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = House
-        fields = ('category', 'image','price','description','ville', 'quartier', 'Nom_proprio', 'tel_proprio', 'date_added')
+        fields = ('category', 'image','price','description','ville', 'quartier', 'Nom_proprio', 'tel_proprio')
         
 
 class meublesSerializer(serializers.ModelSerializer):
