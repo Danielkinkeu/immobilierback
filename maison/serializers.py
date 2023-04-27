@@ -13,6 +13,6 @@ class meublesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = meubles
-        fields = ('image', 'price','description','ville','quartier', 'Nom_entreprise', 'tel_entreprise', 'date_added')
+        fields = ('category','image', 'price','description','ville','quartier', 'Nom_entreprise', 'tel_entreprise', 'date_added')
 
         

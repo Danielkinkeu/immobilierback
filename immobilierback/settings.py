@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'accounts',
     'corsheaders',
     'rest_framework',
-    'maison.apps.MaisonConfig',    
+    'maison.apps.MaisonConfig',  
+    'location_field.apps.DefaultConfig',  
     
 ]
 

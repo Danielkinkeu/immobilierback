@@ -7,7 +7,7 @@ import json
 
 CATEGORY =(
 ("M", "Maison"),
-("A", "Studio"),
+("A", "Apartement"),
 ("S", "Studio"),
 ("C", "Chambre"),
 )
@@ -21,13 +21,19 @@ class House(models.Model):
     Nom_proprio = models.CharField(max_length=50)
     tel_proprio = models.IntegerField(default='698575401')
     date_added =models.DateTimeField(auto_now=True)
+    isNegociable = models.BooleanField(default=False)
  
     class Meta:
         ordering = ['-date_added']
 
-
+CATEGORI =(
+("M", "chaise"),
+("A", "Canapé"),
+("S", "lampe"),
+("C", "tabouret"),
+)
 class meubles(models.Model):
-    
+    category = models.CharField(max_length = 30, default='chaise',choices=CATEGORI)
     image = models.ImageField()
     price = models.FloatField()
     description = models.TextField()
@@ -36,6 +42,7 @@ class meubles(models.Model):
     Nom_entreprise = models.CharField(max_length=50)
     tel_entreprise = models.IntegerField(default='698575401')
     date_added =models.DateTimeField(auto_now=True)
+    isNegociable = models.BooleanField(default=False)
     def __str__(self):
         return self.name
     class Meta:
