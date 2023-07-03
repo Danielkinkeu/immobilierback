@@ -26,7 +26,7 @@ class House(models.Model):
     class Meta:
         ordering = ['-date_added']
 
-CATEGORI =(
+CATEGORI =( 
 ("M", "chaise"),
 ("A", "Canapé"),
 ("S", "lampe"),
