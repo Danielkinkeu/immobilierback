@@ -22,6 +22,7 @@ class House(models.Model):
     tel_proprio = models.IntegerField(default='698575401')
     date_added =models.DateTimeField(auto_now=True)
     isNegociable = models.BooleanField(default=False)
+    views = models.IntegerField(default=0)
  
     class Meta:
         ordering = ['-date_added']
@@ -43,6 +44,7 @@ class meubles(models.Model):
     tel_entreprise = models.IntegerField(default='698575401')
     date_added =models.DateTimeField(auto_now=True)
     isNegociable = models.BooleanField(default=False)
+    views = models.IntegerField(default=0)
     def __str__(self):
         return self.name
     class Meta:

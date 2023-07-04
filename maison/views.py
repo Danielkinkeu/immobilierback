@@ -16,8 +16,10 @@ class houseView(viewsets.ModelViewSet):
     serializer_class = houseSerializer
     queryset = House.objects.all()
 class ListHouseView(ListAPIView):
-    queryset= House.objects.all()
+    # queryset= House.objects.all()
     serializer_class= houseSerializer
+    def get_queryset(self):
+        return House.objects.order_by('-views')
 
 class CreateHouseView(CreateAPIView):
     queryset= House.objects.all()
@@ -49,7 +51,9 @@ class meubleView(viewsets.ModelViewSet):
     serializer_class = meublesSerializer
     queryset = meubles.objects.all()
 class ListMeubleView(ListAPIView):
-    queryset= meubles.objects.all()
+    # queryset= meubles.objects.all()
+    def get_queryset(self):
+        return meubles.objects.order_by('-views')
     serializer_class= meublesSerializer
 class searchMeubleView(ListAPIView):
     queryset = meubles.objects.all()
